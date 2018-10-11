@@ -1,0 +1,4 @@
+username,user_id,starting_package,ending_package,credit_card,payment_method,payment_method_id,checkout_type,country,comp_seat,additional_seats,acct_checkout_vat_exemption,vat_country,tranx_id,tranxStatus_id,vat_amount,vat_number,trans_total,payment_processor_id
+testadminfreecompseatteams6_20181011103928,63922413,34,34,VISA,card,1,Basic To Paid,US,0,0,,,22513737,4,0,,384,2
+testadminfreecompseatteams7_20181011104723,63922481,34,34,MASTERCARD,card,1,Basic To Paid,IE,0,0,,,22513815,4,8078,,432,7
+testadminfreecompseatteams9_20181011104856,63922501,34,34,JCB,card,1,Basic To Paid,US,0,0,,,22513826,4,0,,384,2

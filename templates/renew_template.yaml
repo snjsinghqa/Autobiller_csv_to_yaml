@@ -1,0 +1,36 @@
+-
+  tr_id: 'C999999'
+  tc_name: '$tc_name'
+  tc_description: 'Testing'
+  test_type: 'BVT'
+  update:
+    user_id:
+      $user_id:
+        user.is_paid: '$user_is_paid'
+        user.next_renewal_date:  2010-01-01
+        user.monthly_check_date: 2010-01-01
+    tran_id:
+      latest:
+        tran.auto_processing_enabled: True
+  validate:
+    user_id:
+      $user_id:
+        user.is_paid: '$user_is_paid'
+        user.package_id: '$validate_user_package_id'
+        user.next_renewal_date:  2011-01-01
+        user.payment_processor_id: '$validate_user_payment_processor_id'
+    tran_id:
+      latest:
+        tran.paid: True
+        tran.payment_method_id: '$validate_tran_payment_method_id'
+        tran.tranx_status_id: '$validate_tran_status_id'
+        tran.pay_status_check_count: 0
+        tran.total: '$validate_tran_total_after_discount'
+  finalize:
+    user_id:
+      $user_id:
+        user.next_renewal_date:  2030-01-01
+        user.monthly_check_date: 2030-01-01
+    tran_id:
+      latest:
+        tran.auto_processing_enabled: False

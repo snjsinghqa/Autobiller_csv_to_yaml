@@ -1,0 +1,3 @@
+username,user_id,starting_package,ending_package,credit_card,payment_method,payment_method_id,checkout_type,country,comp_seat,additional_seats,acct_checkout_vat_exemption,vat_country,tranx_id,tranxStatus_id,vat_amount,vat_number,trans_total,payment_processor_id,no_of_referees,percent_discount_applicable,trans_total_after_discount
+testreferralaccountbasictopaid9_20181009084801,63915760,1,32,VISA,card,1,Basic To Paid,AU,0,0,0,0,22508911,4,2356,,288,7,1,10,259.2
+testreferralaccountbasictopaid51_20181009093819,63915771,1,32,VISA,card,1,Basic To Paid,US,0,0,0,0,22508918,4,0,,372,2,5,50,186.0

@@ -1,0 +1,96 @@
+- finalize:
+    tran_id:
+      latest:
+        tran.auto_processing_enabled: false
+        tran.pay_status_check_date: 2030-01-01
+  tc_description: Retry Case
+  tc_name: testreferralaccountbasictopaid1_20181011114432
+  test_type: BVT
+  tr_id: C9999999
+  update:
+    tran_id:
+      latest:
+        tran.auto_processing_enabled: true
+        tran.paid: false
+        tran.pay_status_check_date: 2010-01-01
+        tran.tranx_status_id: 3
+    user_id:
+      63922716:
+        user.is_paid: false
+  validate:
+    tran_id:
+      latest:
+        tran.paid: true
+        tran.pay_status_check_count: 0
+        tran.payment_method_id: 1
+        tran.total: 34560
+        tran.tranx_status_id: 4
+    user_id:
+      63922716:
+        user.is_paid: true
+        user.package_id: 34
+        user.payment_processor_id: 7
+- finalize:
+    tran_id:
+      latest:
+        tran.auto_processing_enabled: false
+        tran.pay_status_check_date: 2030-01-01
+  tc_description: Retry Case
+  tc_name: testreferralaccountbasictopaid21_20181011114933
+  test_type: BVT
+  tr_id: C9999999
+  update:
+    tran_id:
+      latest:
+        tran.auto_processing_enabled: true
+        tran.paid: false
+        tran.pay_status_check_date: 2010-01-01
+        tran.tranx_status_id: 3
+    user_id:
+      63922723:
+        user.is_paid: false
+  validate:
+    tran_id:
+      latest:
+        tran.paid: true
+        tran.pay_status_check_count: 0
+        tran.payment_method_id: 1
+        tran.total: 33600
+        tran.tranx_status_id: 4
+    user_id:
+      63922723:
+        user.is_paid: true
+        user.package_id: 32
+        user.payment_processor_id: 7
+- finalize:
+    tran_id:
+      latest:
+        tran.auto_processing_enabled: false
+        tran.pay_status_check_date: 2030-01-01
+  tc_description: Retry Case
+  tc_name: testreferralaccountbasictopaid26_20181011123932
+  test_type: BVT
+  tr_id: C9999999
+  update:
+    tran_id:
+      latest:
+        tran.auto_processing_enabled: true
+        tran.paid: false
+        tran.pay_status_check_date: 2010-01-01
+        tran.tranx_status_id: 3
+    user_id:
+      63923404:
+        user.is_paid: false
+  validate:
+    tran_id:
+      latest:
+        tran.paid: true
+        tran.pay_status_check_count: 0
+        tran.payment_method_id: 1
+        tran.total: 0
+        tran.tranx_status_id: 4
+    user_id:
+      63923404:
+        user.is_paid: true
+        user.package_id: 36
+        user.payment_processor_id: 7

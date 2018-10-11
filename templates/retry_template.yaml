@@ -1,0 +1,33 @@
+-
+  tr_id: 'C9999999'
+  tc_name: '$tc_name'
+  tc_description: 'Retry Case'
+  test_type: 'BVT'
+  update:
+    user_id:
+      $user_id:
+        user.is_paid: False
+    tran_id:
+      latest:
+        tran.paid: False
+        tran.tranx_status_id: 3
+        tran.pay_status_check_date: 2010-01-01
+        tran.auto_processing_enabled: True
+  validate:
+    user_id:
+      $user_id:
+        user.is_paid: True
+        user.package_id: 134
+    tran_id:
+      latest:
+        tran.paid: True
+        tran.payment_method_id: 1
+        tran.tranx_status_id: 4
+        tran.pay_status_check_count: 0
+        tran.total: 82800
+#        paymentlog.pa_bin_number: 411111
+  finalize:
+    tran_id:
+      latest:
+        tran.pay_status_check_date: 2030-01-01
+        tran.auto_processing_enabled: False
